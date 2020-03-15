@@ -11,8 +11,8 @@ pipeline {
     stage('Build') {
       steps {  // no container directive is needed as the maven container is the default
       container('python') {
-        echo "tenant is "
-        echo "${params.tenant}"
+        echo "tenant is : ${params.tenant}"
+        echo "tenantEnv is : ${params.tenantEnv}"
         echo "python version is"
         sh "python --version" 
         sh "python hello.py" 
