@@ -1,3 +1,4 @@
+properties([parameters([string(defaultValue: '', description: '', name: 'tenant', trim: true), string(defaultValue: '', description: '', name: 'tenantEnv', trim: true)])])
 pipeline {
   agent {
     kubernetes {
