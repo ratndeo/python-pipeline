@@ -20,6 +20,12 @@ pipeline {
            }
          }
      }
+	post {
+		always {
+			emailext attachLog: true, body: '', compressLog: true, subject: '', to: 'ratna.deo@lenfoundry.com'
+		}
+	}
+	
   }
     
   
