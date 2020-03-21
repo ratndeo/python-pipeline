@@ -23,7 +23,7 @@ pipeline {
 	post {
 		always {
 			archiveArtifacts artifacts: 'pythonArchieve.txt', onlyIfSuccessful: true
-			emailext attachLog: true, body: '', compressLog: true, subject: '', to: 'ratna.deo@lenfoundry.com'
+			emailext attachLog: true, body: '', compressLog: true, subject: '', to: 'ratna.deo@lendfoundry.com'
 		}
 	}
 	
