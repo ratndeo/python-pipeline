@@ -23,7 +23,7 @@ pipeline {
 	post {
 		always {
 			archiveArtifacts artifacts: 'pythonArchieve.txt', onlyIfSuccessful: true
-			emailext attachLog: true, body: "${env.PROJECT_NAME} - Build # ${env.BUILD_NUMBER} - ${env.BUILD_STATUS}:\nCheck console output at ${env.BUILD_URL} to view the results.", compressLog: true, subject: "${env.PROJECT_NAME} - Build # ${env.BUILD_NUMBER} - ${env.BUILD_STATUS}!", to: 'ratna.deo@lendfoundry.com'
+			emailext attachLog: true, body: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - ${env.BUILD_STATUS}:\nCheck console output at ${env.BUILD_URL} to view the results.", compressLog: true, subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - ${env.BUILD_STATUS}!", to: 'ratna.deo@lendfoundry.com'
 			//emailext attachLog: true, compressLog: true,  to: 'ratna.deo@lendfoundry.com'
 		}
 	}
